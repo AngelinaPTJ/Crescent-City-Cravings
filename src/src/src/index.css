@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-nola-gold: #D4AF37;
+  --color-nola-purple: #4B0082;
+  --color-nola-green: #008000;
+  --color-nola-wood: #3D2B1F;
+}
+
+@layer base {
+  body {
+    @apply bg-[#1a1a1a] text-white font-sans;
+  }
+  
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+.jazzy-card {
+  @apply bg-nola-wood/40 border border-nola-gold/30 rounded-xl p-4 backdrop-blur-sm;
+}
+
+.jazzy-button {
+  @apply px-4 py-2 bg-nola-gold text-nola-wood font-bold rounded-lg transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:hover:scale-100;
+}
+
